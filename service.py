@@ -94,3 +94,15 @@ def cities_upgrade():
             x = x.split(":")
             data_to_json.append(x[1][2:-3])
     open("new_cities.json", 'w').write(str(data_to_json))
+
+class Config:
+    with open('config') as __file:
+        __data = __file.readlines()
+        configuration = dict()
+        print(__data)
+        for x in __data:
+            x = x.split("=")
+            configuration.update({x[0]: x[1]})
+
+    def config(self, key):
+        return self.configuration.get(key)

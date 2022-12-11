@@ -11,15 +11,37 @@ class Rules:
             else:
                 return False
 
-    def if_used(self):
-        pass
+    def if_used(self, this_word):
+        """Author - Kirigaya Kazuto from Cherkasy"""
+        with open("nado.json", "r") as file:
+            data: list = eval(file.read())
+            if this_word in data:
+                return True
+            else:
+                return False
 
-    def if_last_letter(self):
-        pass
+    @staticmethod
+    def if_last_letter(last_word, this_word):
+        """Author - Kirigaya Kazuto"""
+        nado = last_word[-1]
+        if nado == "ь":
+            nado = last_word[-2]
+        if this_word[0].upper() == nado.upper():
+            return True
+        else:
+            return False
 
 
 class Multiplayer:
-    pass
+    def start_room(self):
+        pass
+    def turn(self):
+        pass
+
+    def timer(self):
+        pass
+
+
 
 
 class Anticheat:

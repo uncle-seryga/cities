@@ -1,3 +1,3 @@
-import game
 
-print(game.Rules().if_city('Львів'))
+
+Config().config("bot_api_key")
