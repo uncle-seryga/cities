@@ -1,3 +1,3 @@
+import game
 
-
-Config().config("bot_api_key")
+game.Multiplayer().start_room(3)

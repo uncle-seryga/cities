@@ -106,3 +106,4 @@ class Config:
 
     def config(self, key):
         return self.configuration.get(key)
+
